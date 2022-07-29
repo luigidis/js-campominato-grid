@@ -1,22 +1,48 @@
-console.log('yo')
+// console.log('yo');
 // stabilisco numero di celle che deve avere una riga
-const rigaCelle = 10
+const rigaCelle = 10;
 // calcolo totalità delle celle che avrò nella mia griglia
-const celleTotali = 10 ** 2
+// const celleTotali = 10 ** 2;
 // vado a prendere l'elemento nel dom dove dovrò mettere le mie celle
-const container = document.querySelector('.container')
-console.log(celleTotali, container)
+const container = document.querySelector('.container');
+// console.log(celleTotali, container);
+// vad o a prendere il bottone dove si genererà la griglia
+const playButton = document.querySelector('.play');
+// console.log(playButton);
 // a questo punto mi creo una funzione che mi crea un div di classe celle
-function createCells (celle) {
-    for (let i = 0; i < celle; i++) {
-        // creo il mio elemento div
-        const divElement = document.createElement('div')
-        // aggiungo la mia classe cella
-        divElement.classList.add('celle')
+function createGrid (celle) {
+    numeroCelle = rigaCelle ** 2
+
+    for (let i = 0; i < numeroCelle; i++) {
+        // Evoco la mia funzione per creare le celle
+        const cella = createCell ();
+        // metto il numero corrispondente alla casella nel mio div creato
+        cella.innerHTML= i + 1
         // a questo punto appendo ogni cella sul mio container
-        container.append(divElement)
+        container.append(cella);
     }
 }
- //invoco la mia funzione per creare celle
+//invoco la mia funzione per creare celle
+createGrid(rigaCelle)
 
-createCells(celleTotali)
+// creo la mia funzione che va a prelevare il dive cella
+function createCell () {
+    const divElement = document.createElement('div');
+    divElement.classList.add('celle');
+    // aggiongo l'event listener
+    divElement.addEventListener('click', clickCheck)
+
+    return divElement
+}
+
+function clickCheck(event) {
+    // console.log(this);
+    cell = this;
+    // metto un colore alla mia cella se viene cliccata
+    cell.classList.toggle('clicked')
+    // metto un messaggio in console della cella clickata
+    console.log(this.innerHTML)
+}
+    
+   
+
