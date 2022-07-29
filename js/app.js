@@ -23,26 +23,31 @@ function createGrid (celle) {
     }
 }
 //invoco la mia funzione per creare celle
-createGrid(rigaCelle)
+// createGrid(rigaCelle)
 
 // creo la mia funzione che va a prelevare il dive cella
 function createCell () {
     const divElement = document.createElement('div');
     divElement.classList.add('celle');
     // aggiongo l'event listener
-    divElement.addEventListener('click', clickCheck)
+    divElement.addEventListener('click', clickCheck);
 
-    return divElement
+    return divElement;
 }
-
+// creo la mia funziona che va a evidenziare le caselle e stampare nella console il numero relativo alla casella
 function clickCheck(event) {
     // console.log(this);
     cell = this;
     // metto un colore alla mia cella se viene cliccata
-    cell.classList.toggle('clicked')
+    cell.classList.toggle('clicked');
     // metto un messaggio in console della cella clickata
-    console.log(this.innerHTML)
+    console.log(this.innerHTML);
 }
+
+// voglio che la mia griglia appaia solo quando l'utente clicca il tasto gioca
+console.log(playButton);
+playButton.addEventListener('click', createGrid())
+
     
    
 
