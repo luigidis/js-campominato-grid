@@ -46,8 +46,21 @@ function clickCheck(event) {
 
 // voglio che la mia griglia appaia solo quando l'utente clicca il tasto gioca
 console.log(playButton);
-playButton.addEventListener('click', createGrid())
+playButton.addEventListener('click', createGrid);
 
+const easy = document.querySelector('option[value="easy"]');
+console.log(easy);
+
+const medium = document.querySelector('option[value="medium"]');
+console.log(medium);
+
+const hard = document.querySelector('option[value="hard"]');
+console.log(hard);
+
+const difficulty = document.getElementById('difficulty');
+console.log(difficulty);
+console.dir(difficulty);
+console.log(difficulty.value);
     
    
 

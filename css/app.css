@@ -25,6 +25,21 @@ main {
     padding-left: 25px;
 }
 
+.col-select {
+    padding-right: 20px;
+    
+}
+
+.col-select label {
+    padding-right: 5px;
+}
+
+.col-select #difficulty,
+.col-select label {
+    font-size: 15px;
+}
+    
+
 .play {
     padding: 10px 20px;
     font-size: 15px;
