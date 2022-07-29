@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aquamarine;
+}
+
+main {
+    min-height: 100vh;
+}
+    
+
+.top_bar {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.col-mid {
+    margin-right: auto;
+    padding-left: 25px;
+}
+
+.play {
+    padding: 10px 20px;
+    font-size: 15px;
+}
+    
+.container {
+    flex-basis: 100%;
+    margin: 0 auto;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    aspect-ratio: 1/1;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-top: 50px;
+    border: 2px solid red;
+}
+
+.celle {
+    aspect-ratio: 1/1;
+    border: 2px solid salmon;
+    color: rebeccapurple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
