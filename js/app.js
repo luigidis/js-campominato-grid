@@ -33,6 +33,7 @@ function createGrid (celle) {
         const cella = createCell ();
         // metto il numero corrispondente alla casella nel mio div creato
         cella.innerHTML= i + 1
+        
         // a questo punto appendo ogni cella sul mio container
         container.append(cella);
     }
@@ -57,7 +58,7 @@ function clickCheck(event) {
     // metto un colore alla mia cella se viene cliccata
     cell.classList.toggle('clicked');
     // metto un messaggio in console della cella clickata
-    // console.log(this.innerHTML);
+    console.log(this.innerHTML);
 }
 
 // voglio che la mia griglia appaia solo quando l'utente clicca il tasto gioca
